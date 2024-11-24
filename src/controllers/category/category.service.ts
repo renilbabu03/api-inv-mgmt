@@ -11,7 +11,7 @@ export class CategoryService {
     ) { }
 
     async findAll(): Promise<Category[]> {
-        return this.categoryRepository.find();
+        return this.categoryRepository.find({ relations: ['products'] });
     }
 
     async findOne(id: number): Promise<Category> {
