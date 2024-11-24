@@ -5,6 +5,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './entities/User';
 import { Category } from './entities/Category';
 import { Product } from './entities/Product';
+import { CategoryModule } from './controllers/category/category.module';
 
 @Module({
   imports: [
@@ -18,7 +19,7 @@ import { Product } from './entities/Product';
       entities: [User, Category, Product],
       synchronize: true,
     }),
-    TypeOrmModule.forFeature([User, Category, Product]),
+    CategoryModule
 
   ],
   controllers: [AppController],
