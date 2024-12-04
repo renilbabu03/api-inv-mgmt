@@ -6,6 +6,7 @@ import { User } from './entities/User';
 import { Category } from './entities/Category';
 import { Product } from './entities/Product';
 import { CategoryModule } from './controllers/category/category.module';
+import { ProductModule } from './controllers/product/product.module';
 
 @Module({
   imports: [
@@ -19,7 +20,8 @@ import { CategoryModule } from './controllers/category/category.module';
       entities: [User, Category, Product],
       synchronize: true,
     }),
-    CategoryModule
+    CategoryModule,
+    ProductModule
 
   ],
   controllers: [AppController],
