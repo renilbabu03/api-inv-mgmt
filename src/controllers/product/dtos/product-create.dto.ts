@@ -22,10 +22,11 @@ export class CreateProductDto {
 
 
 
-    @IsDate()
-    expirationDate: Date;
+
+
 
     @IsString()
+    @IsOptional()
     imageURL: string;
 
     @IsNumber()

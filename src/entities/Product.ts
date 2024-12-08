@@ -9,7 +9,7 @@ export class Product {
     @Column()
     name: string;
 
-    @Column()
+    @Column({ nullable: true })
     description: string;
 
     @Column()
@@ -18,16 +18,16 @@ export class Product {
     @Column()
     quantityInStock: number;
 
-    @Column()
+    @Column({ nullable: true })
     brand: string;
 
-    @Column()
+    @Column({ nullable: true })
     SKU: string;
 
-    @Column()
+    @Column({ nullable: true })
     expirationDate: Date;
 
-    @Column()
+    @Column({ nullable: true })
     imageURL: string;
 
     @ManyToOne(() => Category, (category) => category.products)
