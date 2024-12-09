@@ -17,7 +17,7 @@ export class CreateProductDto {
     quantityInStock: number;
 
     @IsString()
-    @IsNotEmpty()
+    @IsOptional()
     brand: string;
 
 
